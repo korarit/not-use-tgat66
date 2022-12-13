@@ -27,7 +27,7 @@ async function all_non_tgat(){
     const data = await get_json("https://tcas66.s3.ap-southeast-1.amazonaws.com/mytcas/courses.json");
 
     //นับถอยหลังเวลส การนับจำนวน
-    let time_end = new Date().getTime() + (data.length*1000);
+    let time_end = new Date().getTime() + (data.length*200);
     var x = setInterval(function() {
         var now = new Date().getTime();
         var distance = time_end - now;
@@ -89,7 +89,7 @@ async function all_non_tgat(){
                 cannot_get_data += 1;
                 console.log("จำนวนหลักสูตรที่ไม่ใช้ TGAT รอบ 3 :" + num_course_non_tgat + " หลักสูตร | จำนวนโครงการในรอบ 3 ที่ไม่ใช้ TGAT :" + num_of_non_tgat + " | ผ่านการตรวจสอบไปแล้ว :" + all_course + "/" + data.length + " หลักสตร | ดึงข้อมูลไม่สำเร็จ :"+cannot_get_data+" ครั้ง");
             }
-        }, i*1000);
+        }, i*200);
     }
     //console.log("จำนวนหลักสูตรที่ไม่ใช้ TGAT :"+num_of_non_tgat);
 }
