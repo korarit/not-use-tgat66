@@ -57,7 +57,6 @@ async function all_non_tgat(){
                             //มี TGATรวม 1 2 3
                         } else {
                             //ไม่มี TGAT 1 2 3
-                            course_all_non_tgat[num_of_non_tgat] = data[i];
                             data_all_non_tgat[num_of_non_tgat] = round_data[program];
                             num_of_non_tgat += 1;
 
